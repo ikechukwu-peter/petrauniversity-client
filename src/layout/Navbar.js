@@ -26,7 +26,12 @@ const Navbar = () => {
   const authLinks = (
     <ul className={toggle ? "nav-links " : "nav-links open "}>
       <li>
-        <Link className=" links active" to="/login">
+        <Link className="links" to="/dashboard">
+          View Your Profile
+        </Link>
+      </li>
+      <li>
+        <Link className=" links active" to="#">
           About
         </Link>
       </li>
@@ -56,12 +61,14 @@ const Navbar = () => {
   const guestLinks = (
     <ul className={toggle ? "nav-links " : "nav-links open "}>
       <li>
-        <Link className=" links active" to="/login">
+        <Link className=" links active" to="#">
           About
         </Link>
       </li>
       <li>
-        <Link className="links">Programs</Link>
+        <Link className="links" to="#">
+          Programs
+        </Link>
       </li>
       <li>
         <Link className="links">Admissions</Link>
