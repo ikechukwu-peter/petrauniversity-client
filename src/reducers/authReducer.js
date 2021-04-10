@@ -9,12 +9,14 @@ export default function (state, action) {
         ...state,
         isAuthenticated: !isEmpty(user),
         user: user,
+        email: "",
+        userId: "",
       };
     case "VERIFY":
       return {
         ...state,
         email: user.email,
-        userId: user.user_id,
+        userId: user.userId,
       };
 
     case "LOGOUT":
