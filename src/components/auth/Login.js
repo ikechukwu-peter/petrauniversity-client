@@ -37,7 +37,10 @@ const Login = (props) => {
     let newUser = { email, password };
 
     try {
-      const send_user = await axios.post("/api/login", newUser);
+      const send_user = await axios.post(
+        "https://petrauni.herokuapp.com/api/login",
+        newUser
+      );
       const response = send_user.data;
 
       const { token } = response;
