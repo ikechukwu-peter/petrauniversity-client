@@ -40,7 +40,10 @@ const Register = (props) => {
       passwordConfirm,
     };
     try {
-      const send_user_data = await axios.post("/api/signup", newUser);
+      const send_user_data = await axios.post(
+        "https://petrauni.herokuapp.com/api/signup",
+        newUser
+      );
       const response = send_user_data.data;
 
       dispatch({ type: "VERIFY", user: response });
