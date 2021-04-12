@@ -16,7 +16,7 @@ export default function (state, action) {
       return {
         ...state,
         email: user.email,
-        userId: user.userId,
+        userId: user.user_id,
       };
 
     case "LOGOUT":
