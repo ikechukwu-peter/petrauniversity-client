@@ -46,15 +46,18 @@ const Register = (props) => {
       );
       const response = send_user_data.data;
 
-      dispatch({ type: "VERIFY", user: response });
+      if (!response.user_id == undefined) {
+        dispatch({ type: "VERIFY", user: response });
+      }
       setMessage(response.message);
+      
       dispatch({ type: "CLEAR_ERRORS" });
       props.history.push("/confirm-email");
     } catch (err) {
       // Handle Error Here
       dispatch({ type: "GET_ERRORS", user: err.response.data.message });
       setError(err.response.data.message);
-      console.log(err.response.data.message);
+   
     }
   };
   return (
