@@ -45,20 +45,20 @@ const Register = (props) => {
         newUser
       );
       const response = send_user_data.data;
-      console.log(response.user_id);
+
       if (response.user_id === "") {
         return;
       }
       dispatch({ type: "VERIFY", user: response });
 
       setMessage(response.message);
+
       dispatch({ type: "CLEAR_ERRORS" });
       props.history.push("/confirm-email");
     } catch (err) {
       // Handle Error Here
       dispatch({ type: "GET_ERRORS", user: err.response.data.message });
       setError(err.response.data.message);
-      console.log(err.response.data.message);
     }
   };
   return (
