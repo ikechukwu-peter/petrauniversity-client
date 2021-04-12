@@ -65,7 +65,7 @@ const Login = (props) => {
           type: "VERIFY",
           user: {
             email: err.response.data.email,
-            userId: err.response.data.user_id,
+            user_id: err.response.data.user_id,
           },
         });
         //Send the user to the confirm page
