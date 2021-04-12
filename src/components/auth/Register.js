@@ -46,7 +46,7 @@ const Register = (props) => {
       );
       const response = send_user_data.data;
 
-      if (!response.user_id == undefined) {
+      if (!response.user_id === undefined) {
         dispatch({ type: "VERIFY", user: response });
       }
       setMessage(response.message);
