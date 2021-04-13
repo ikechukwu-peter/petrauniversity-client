@@ -72,7 +72,7 @@ const Login = (props) => {
         return props.history.push("/confirm-email");
       }
       dispatch({ type: "GET_ERRORS", user: err.response.data.message });
-      setError(user.error.error);
+      setError(err.response.data.message);
     }
   };
   return (
