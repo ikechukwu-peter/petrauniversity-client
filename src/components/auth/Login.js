@@ -56,6 +56,7 @@ const Login = (props) => {
 
       //Clear errors
       dispatch({ type: "CLEAR_ERRORS" });
+      localStorage.removeItem("user_details");
       //Redirect to the dashboard page
       props.history.push("/dashboard");
     } catch (err) {
