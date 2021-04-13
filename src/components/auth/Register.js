@@ -49,6 +49,11 @@ const Register = (props) => {
       if (response.user_id === "") {
         return;
       }
+      const user_details = {
+        email,
+        user_id: response.user_id,
+      };
+      localStorage.setItem("user_details", JSON.stringify(user_details));
       dispatch({ type: "VERIFY", user: response });
 
       setMessage(response.message);
