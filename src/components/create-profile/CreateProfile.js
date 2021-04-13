@@ -12,6 +12,7 @@ const CreateProfile = () => {
             </Link>
             <h1 className="display-4 text-center text-light">
               Create Your Profile
+              <h2 className="text-warning">Route Not Ready</h2>
             </h1>
             <p className="lead text-center text-light">
               Let's get some information to make your profile stand out
