@@ -20,7 +20,7 @@ const VerifyEmail = (props) => {
       }
     };
     request();
-  }, []);
+  }, [props.history, props.match.url, dispatch]);
 
   return (
     <div className="container">
