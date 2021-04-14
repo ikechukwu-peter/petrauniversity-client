@@ -20,7 +20,7 @@ const Confirmation = (props) => {
       props.history.push("/dashbaord");
     }
     // eslint - disable - next - line;
-  }, [localStorage.user_details]);
+  }, [user.auth.isAuthenticated, props.history, dispatch]);
 
   //Component will receive props
   useEffect(() => {
